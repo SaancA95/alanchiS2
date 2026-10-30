@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appCalificaciones.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="12">
+
+            <Label Text="Sistema de Calificaciones UISRAEL"
+                   FontSize="22" FontAttributes="Bold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Estudiante" FontAttributes="Bold" />
+            <Picker x:Name="pckEstudiante" Title="Seleccione un estudiante">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Mauricio Toapanta</x:String>
+                        <x:String>Carlos Gómez</x:String>
+                        <x:String>Anthony Lanchi</x:String>
+                        <x:String>Luis Andrade</x:String>
+                        <x:String>Sofía Vargas</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Fecha" FontAttributes="Bold" />
+            <DatePicker x:Name="dpFecha" />
+
+            <BoxView HeightRequest="1" Color="Gray" />
+            <Label Text="PARCIAL 1" FontAttributes="Bold" />
+
+            <Label Text="Nota 1 (sobre 10) x 0.3" />
+            <Entry x:Name="txtSeguimiento1" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label Text="Examen 1 (sobre 10) x 0.2" />
+            <Entry x:Name="txtExamen1" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label x:Name="lblParcial1" Text="Nota Parcial 1: -" />
+
+            <BoxView HeightRequest="1" Color="Gray" />
+            <Label Text="PARCIAL 2" FontAttributes="Bold" />
+
+            <Label Text="Nota 2 (sobre 10) x 0.3" />
+            <Entry x:Name="txtSeguimiento2" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label Text="Examen 2 (sobre 10) x 0.2" />
+            <Entry x:Name="txtExamen2" Placeholder="0 - 10" Keyboard="Numeric" />
+
+            <Label x:Name="lblParcial2" Text="Nota Parcial 2: -" />
+
+            <BoxView HeightRequest="1" Color="Gray" />
+
+            <Label x:Name="lblNotaFinal" Text="Nota Final: -" FontAttributes="Bold" />
+            <Label x:Name="lblEstado" Text="Estado: -" FontAttributes="Bold" />
+
+            <Button Text="Calcular" Clicked="OnCalcularClicked" />
+            <Button Text="Limpiar" Clicked="OnLimpiarClicked" BackgroundColor="Gray" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+</ContentPage>
